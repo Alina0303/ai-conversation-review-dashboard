@@ -1,5 +1,7 @@
 ## Deploy
 
+[ai-conversation-review-dashboard](https://ai-conversation-review-dashboard.netlify.app/)
+
 ## Project Features
 
 - Responsive Design & Tailwind: I used Tailwind CSS to make the dashboard fully responsive. The layout automatically adjusts to look great on everything from mobile phones to desktop screens.
@@ -20,5 +22,5 @@ Error Handling: If there’s an API error or no internet, the widget displays a 
 
 ## How to run the project
 
-* npm i
-* npm run dev
+- npm i
+- npm run dev
