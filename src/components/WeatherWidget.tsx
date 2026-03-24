@@ -1,5 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+interface WeatherValue {
+  value: string;
+}
+
+interface RowWeatherCondition {
+  temp_C: string;
+  weatherDesc: WeatherValue[];
+  weatherIconUrl: WeatherValue[];
+}
 
 interface WeatherState {
   temp_C: string;
@@ -7,7 +16,7 @@ interface WeatherState {
   weatherIconUrl: string;
 }
 interface WttrResponse {
-  current_condition: WeatherState[];
+  current_condition: RowWeatherCondition[];
 }
 
 interface WeatherProps {
