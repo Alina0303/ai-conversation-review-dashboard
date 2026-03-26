@@ -10,7 +10,6 @@ import { nanoid } from "nanoid";
 
 function App() {
   const [selectedChatId, setSelectedChatId] = useState<string | null>(null);
-  console.log(selectedChatId);
 
   const [conversations, setConversations] = useState(MOCK_CONVERSATION);
 
@@ -41,7 +40,6 @@ function App() {
       ),
     );
   };
-  console.log(conversations);
 
   return (
     <div className="drawer sm:drawer-open">
