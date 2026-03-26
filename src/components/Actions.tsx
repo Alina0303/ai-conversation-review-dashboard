@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 
 interface ActionsProps {
   chatId: string | null;
@@ -14,7 +14,7 @@ const Actions = ({
   updateReviewerNotes,
 }: ActionsProps) => {
   const [inputValue, setInputValue] = useState<string>("");
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     updateReviewerNotes(chatId, inputValue);
     setInputValue("");

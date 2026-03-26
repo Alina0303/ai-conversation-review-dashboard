@@ -6,7 +6,7 @@ export const MOCK_CONVERSATION: Conversation[] = [
     title: "Billing Issues",
     status: "Pending Review",
     city: "London",
-    category: "Logistics",
+    category: "Billings",
     messages: [
       {
         id: nanoid(),
@@ -39,7 +39,7 @@ export const MOCK_CONVERSATION: Conversation[] = [
     title: "Logistics",
     status: "Approved",
     city: "Paris",
-    category: "Billings",
+    category: "Logistics",
     messages: [
       {
         id: nanoid(),
