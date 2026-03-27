@@ -2,11 +2,8 @@ import MessageBubble from "./MessageBubble";
 import { MOCK_CONVERSATION } from "../data/mockData";
 import type { Conversation } from "../types";
 import WeatherWidget from "./WeatherWidget";
-interface ChatWindowProps {
-  chatId: string | null;
-}
 
-function ChatWindow({ chatId }: ChatWindowProps) {
+function ChatWindow({ chatId }: { chatId: string }) {
   const currentChat: Conversation | undefined = MOCK_CONVERSATION.find(
     (item) => item.id === chatId,
   );
@@ -18,7 +15,12 @@ function ChatWindow({ chatId }: ChatWindowProps) {
           <h2 className="text-2xl font-semibold mb-2rem">
             {currentChat?.title}
           </h2>
-          <p>{currentChat?.category}</p>
+          <p className=" mt-2">
+            Category :{" "}
+            <span className="lowercase p-1 border border-accent rounded bg-accent-content">
+              {currentChat?.category}
+            </span>
+          </p>
         </div>
         <div>
           <WeatherWidget city={currentChat?.city} />

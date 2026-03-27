@@ -13,7 +13,7 @@ const Actions = ({
   updateStatus,
   updateReviewerNotes,
 }: ActionsProps) => {
-  const [inputValue, setInputValue] = useState<string>("");
+  const [inputValue, setInputValue] = useState("");
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     updateReviewerNotes(chatId, inputValue);

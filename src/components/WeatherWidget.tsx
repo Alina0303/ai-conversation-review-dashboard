@@ -25,8 +25,8 @@ interface WeatherProps {
 
 const WeatherWidget = ({ city }: WeatherProps) => {
   const [weather, setWeather] = useState<WeatherState | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<boolean>(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const fetchWeather = async () => {
     try {
       const { data } = await axios.get<WttrResponse>(

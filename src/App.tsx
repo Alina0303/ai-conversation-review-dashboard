@@ -9,7 +9,7 @@ import { MOCK_CONVERSATION } from "./data/mockData";
 import { nanoid } from "nanoid";
 
 function App() {
-  const [selectedChatId, setSelectedChatId] = useState<string | null>(null);
+  const [selectedChatId, setSelectedChatId] = useState("");
 
   const [conversations, setConversations] = useState(MOCK_CONVERSATION);
 
@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <div className="drawer sm:drawer-open">
+    <div className="drawer md:drawer-open">
       <input
         id="my-drawer-1"
         type="checkbox"
@@ -51,7 +51,7 @@ function App() {
       <div className="drawer-content mt-2 ml-2">
         <label
           htmlFor="my-drawer-1"
-          className="btn btn-primary drawer-button sm:hidden"
+          className="btn btn-primary drawer-button md:hidden ml-4"
         >
           <GiHamburgerMenu />
         </label>
